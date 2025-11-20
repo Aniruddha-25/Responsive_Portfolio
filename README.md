@@ -1,8 +1,6 @@
 # Responsive Portfolio
 
 
-
-
 https://github.com/user-attachments/assets/22397f1a-11f2-445c-9a84-c8e17b9f5ea0
 
 
