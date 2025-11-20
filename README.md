@@ -6,19 +6,19 @@
 
 ## Features
 
-- Home Section – Intro with a downloadable CV
+- **Home Section** – Intro with a downloadable CV
 
-- About Section – Background and summary
+- **About Section** – Background and summary
 
-- Experience Section – Internship & professional details
+- **Experience Section** – Internship & professional details
 
-- Skills Section – Technology stack with icons
+- **Skills Section** – Technology stack with icons
 
-- Projects Section – Project cards with GitHub links
+- **Projects Section** – Project cards with GitHub links
 
-- Contact Section – Phone, email & LinkedIn
+- **Contact Section** – Phone, email & LinkedIn
 
-- Feedback Form – Functional form using Web3Forms
+- **Feedback Form** – Functional form using Web3Forms
 
 
 ## Technologies Used
