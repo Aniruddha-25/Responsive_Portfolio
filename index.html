@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      />
+
+      <div class="container">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <nav class="sidebar" id="sidebar">
+          <div class="logo"><i class="fas fa-desktop"></i> Portfolio</div>
+          <ul id="sidebar-menu">
+            <li>
+              <a href="#home"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fas fa-user"></i> About</a>
+            </li>
+            <li>
+              <a href="#experience"
+                ><i class="fas fa-briefcase"></i> Experience</a
+              >
+            </li>
+            <li>
+              <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+            </li>
+            <li>
+              <a href="#portfolio"><i class="fas fa-file-alt"></i> Projects</a>
+            </li>
+            <li>
+              <a href="#contact"><i class="fa fa-address-book"></i> Contact</a>
+            </li>
+            <li>
+              <a href="#feedback"><i class="fas fa-comment"></i> Feedback</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Home Section -->
+          <section id="home">
+            <div class="hero-grid">
+              <div class="hero-text">
+                <p class="hero-pill">AI & ML Engineer</p>
+                <h1>Hi, I'm Aniruddha Salvankar</h1>
+                <p class="hero-lead">
+                  I design machine-learning workflows and responsive web
+                  products that turn messy data into intuitive dashboards,
+                  prototypes, and production-ready tools.
+                </p>
+                <div class="hero-actions">
+                  <a
+                    href="./Portfolio/Resume.pdf"
+                    class="btn"
+                    download="Aniruddha_CV.pdf"
+                    >Download CV</a
+                  >
+                  <a href="#contact" class="btn ghost">Let's Connect</a>
+                </div>
+                <div class="hero-meta">
+                  <div>
+                    <span class="hero-label">Location</span>
+                    <span class="hero-value">Bangalore, India</span>
+                  </div>
+                  <div>
+                    <span class="hero-label">Focus</span>
+                    <span class="hero-value">AI/ML · Full-Stack · UI Systems</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-card">
+                <div class="hero-photo-frame">
+                  <img
+                    src="./Img Source/IMG.jpg"
+                    alt="Aniruddha Salvankar"
+                    class="hero-photo"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-simple">
+              <p>
+                Aspiring AI & ML Engineer with a strong foundation in Python,
+                Java, and core machine learning principles gained through
+                internships and academic projects. Proficient in Scikit-learn,
+                Pandas, NumPy, Flask, and experienced in data preprocessing,
+                model development, and API integration.
+              </p>
+              <p>
+                Passionate about building data-driven solutions to solve
+                real-world problems, with a focus on continuous learning and
+                improving technical and analytical skills.
+              </p>
+            </div>
+          </section>
+
+          <!-- Experience Section -->
+          <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience-list">
+              <article class="experience-card">
+                <a
+                  href="https://nicozn.com/"
+                  class="experience-logo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="./Img Source/Internship/Nicozn Technologies.webp"
+                    alt="Nicozn Technologies Logo"
+                  />
+                </a>
+                <div class="experience-body">
+                  <div class="experience-header">
+                    <div>
+                      <p class="experience-company">Nicozn Technologies</p>
+                      <p class="experience-project-line">
+                        Project: Rockside Restaurant Webpage
+                      </p>
+                      <span class="experience-pill">Front-End Developer Intern</span>
+                    </div>
+                    <span class="experience-duration">Oct 2018 – Nov 2018</span>
+                  </div>
+                  <ul class="experience-highlights">
+                    <li>
+                      Technologies used :
+                      <span class="experience-tags">
+                        HTML • CSS • JavaScript • Figma • GSAP • Firebase Hosting
+                      </span>
+                    </li>
+                    <li>
+                      Built animated hero interactions with GSAP and deployed
+                      previews with Firebase Hosting for stakeholder demos.
+                    </li>
+                    <li>
+                      Documented responsive guidelines so future interns could
+                      extend components without breaking layouts.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <a
+                  href="https://suprajit.com/"
+                  class="experience-logo dual"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="Img Source/Internship/SUPRAJIT.NS.png"
+                    alt="Suprajit Engineering Limited Logo"
+                    class="suprajit-logo"
+                  />
+                  <img
+                    src="Img Source/Internship/SUPRAJIT.png"
+                    alt="Suprajit Engineering Limited wordmark"
+                    class="suprajit-name-logo"
+                  />
+                </a>
+                <div class="experience-body">
+                  <div class="experience-header">
+                    <div>
+                      <p class="experience-company">Suprajit Engineering Ltd.</p>
+                      <p class="experience-project-line">
+                        Project: College Placement Management System
+                      </p>
+                      <span class="experience-pill">
+                        Full Stack Developer Intern (PostgreSQL)
+                      </span>
+                    </div>
+                    <span class="experience-duration">Mar 2025 – Jun 2025</span>
+                  </div>
+                  <ul class="experience-highlights">
+                    <li>
+                      Technologies used :
+                      <span class="experience-tags">
+                        HTML • CSS • JavaScript • Node.js • Flask • PostgreSQL
+                      </span>
+                    </li>
+                    <li>
+                      Built REST endpoints and SQL views to surface production
+                      KPIs; introduced reusable cards and tables for varying
+                      screen sizes.
+                    </li>
+                    <li>
+                      Collaborated with QA to script accessibility and
+                      responsiveness checks before UAT releases.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Skills Section -->
+          <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+              <!-- Languages -->
+              <li class="skill">
+                <div class="skill-item">
+                  <div class="skill-name" style="font-weight: bold">
+                    Languages
+                  </div>
+                </div>
+                <ul class="skill-details">
+                  <li>
+                    <img
+                      src="Img Source/Skills/Languages/C.png"
+                      alt="C"
+                      class="skill-icon"
+                    />
+                    C
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Languages/C++.png"
+                      alt="C++"
+                      class="skill-icon"
+                    />
+                    C++
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Languages/Java.jpg"
+                      alt="Java"
+                      class="skill-icon"
+                    />
+                    Java
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Languages/python.webp"
+                      alt="Python"
+                      class="skill-icon"
+                    />
+                    Python
+                  </li>
+                </ul>
+              </li>
+
+              <li class="skill">
+                <div class="skill-item">
+                  <div class="skill-name" style="font-weight: bold">
+                    Web Technologies
+                  </div>
+                </div>
+                <ul class="skill-details">
+                  <li>
+                    <img
+                      src="Img Source/Skills/Web Technologies/HTML.webp"
+                      alt="HTML"
+                      class="skill-icon"
+                    />
+                    HTML
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Web Technologies/CSS.png"
+                      alt="CSS"
+                      class="skill-icon"
+                    />
+                    CSS
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Web Technologies/JavaScript.webp"
+                      alt="JavaScript"
+                      class="skill-icon"
+                    />
+                    JavaScript
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Web Technologies/Node.js.png"
+                      alt="JavaScript"
+                      class="skill-icon"
+                    />
+                    Node.js
+                  </li>
+                </ul>
+              </li>
+              <!-- Database -->
+              <li class="skill">
+                <div class="skill-item">
+                  <div class="skill-name" style="font-weight: bold">
+                    Database
+                  </div>
+                </div>
+                <ul class="skill-details">
+                  <li>
+                    <img
+                      src="Img Source/Skills/Database/SQL.png"
+                      alt="SQL"
+                      class="skill-icon"
+                    />
+                    SQL
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Database/Postgresql.png"
+                      alt="PostgreSQL"
+                      class="skill-icon"
+                    />
+                    PostgreSQL
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Database/MongoDB.png"
+                      alt="MongoDB"
+                      class="skill-icon"
+                    />
+                    MongoDB
+                  </li>
+                </ul>
+              </li>
+
+              <li class="skill">
+                <div class="skill-item">
+                  <div class="skill-name" style="font-weight: bold">Tools</div>
+                </div>
+                <ul class="skill-details">
+                  <li>
+                    <img
+                      src="Img Source/Skills/Tools/MySql.png"
+                      alt="MySQL"
+                      class="skill-icon"
+                    />
+                    MySQL
+                  </li>
+                  <li>
+                    <img
+                      src="Img Source/Skills/Tools/SolidEdge.png"
+                      alt="Solid Edge"
+                      class="skill-icon"
+                    />
+                    Solid Edge
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <!--Projects Section-->
+          <section id="portfolio" class="section">
+            <h2>Projects</h2>
+            <div class="project-cards-container">
+              <div class="project-card">
+                <img
+                  src="Img Source/Projects/House Price Prediction.png"
+                  alt="House Price Prediction"
+                  class="project-img"
+                />
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>House Price Prediction</h3>
+                    <p>
+                      This Model Uses all Python ML Models and tells which model
+                      will give you best accuracy by testing each prediction and
+                      presents you the prediction of best model.
+                    </p>
+                    <a
+                      href="https://github.com/Aniruddha-25/House_Price_Prediction"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <img
+                  src="Img Source/Projects/Matter.png"
+                  alt="Matter Bike Website"
+                  class="project-img"
+                />
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Matter Bike Website</h3>
+                    <p>
+                      An interactive web presentation for the MATTER AERA bike
+                      using HTML, CSS, and JavaScript, featuring scroll-driven
+                      3D image rotation and dynamic text to showcase key
+                      features.
+                    </p>
+                    <a
+                      href="https://github.com/Aniruddha-25/Matter-Bike-Website"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <img
+                  src="Img Source/Projects/Suprajit.png"
+                  alt="Suprajit Login Page Website"
+                  class="project-img"
+                />
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Suprajit Login Page</h3>
+                    <p>
+                      A simple and visually appealing login page built with
+                      HTML, CSS, and JavaScript.
+                    </p>
+                    <a
+                      href="https://github.com/Aniruddha-25/Suprajit-Login-Page"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <img
+                  src="Img Source/Projects/Python GUI.png"
+                  alt="Python Data Entry Using GUI"
+                  class="project-img"
+                />
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Python Data Entry Using GUI</h3>
+                    <p>
+                      A simple Python-Tkinter app with PostgreSQL to enter and
+                      store employee data via a GUI, and display records in a
+                      paginated table.
+                    </p>
+                    <a
+                      href="https://github.com/Aniruddha-25/Login-Page-NodeJs-PostgreSql"
+                      target="_blank"
+                      class="project-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="section">
+            <h2 class="contact-title">
+              <i class="fa fa-address-book"></i> Contact
+            </h2>
+            <div class="contact-glass-card">
+              <div class="contact-glass-method">
+                <span class="contact-glass-icon">
+                  <img src="Img Source/Contact/phone no icon.svg" alt="Phone" style="width: 28px; height: 28px; object-fit: contain;" />
+                </span>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <a href="tel:+918657809766" class="contact-value">+91 86578 09766</a>
+                </div>
+              </div>
+              <div class="contact-glass-method">
+                <span class="contact-glass-icon">
+                  <img src="Img Source/Contact/gmail icon.webp" alt="Email" style="width: 28px; height: 28px; object-fit: contain;" />
+                </span>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <a href="mailto:aniruddha.salvankar2523@gmail.com" class="contact-value">aniruddha.salvankar2523@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-glass-method">
+                <span class="contact-glass-icon">
+                  <img src="Img Source/Contact/linkedin icon.webp" alt="LinkedIn" style="width: 28px; height: 28px; object-fit: contain;" />
+                </span>
+                <div>
+                  <div class="contact-label">LinkedIn</div>
+                  <a href="https://www.linkedin.com/in/aniruddha-salvankar-193642264/" target="_blank" class="contact-value">
+                    Aniruddha Salvankar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Feedback Section -->
+          <section id="feedback" class="section">
+            <h2>Feedback</h2>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="feedback-form"
+              id="feedback-form"
+            >
+              <!-- Hidden Access Key -->
+              <input
+                type="hidden"
+                name="access_key"
+                value="YOUR_ACCESS_KEY_HERE"
+              />
+
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Feedback"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn" id="submit-button">
+                Submit Feedback
+              </button>
+            </form>
+
+            <div
+              id="form-messages"
+              style="
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1000;
+                width: 80%;
+                max-width: 600px;
+              "
+            >
+              <p
+                id="success-message"
+                style="
+                  display: none;
+                  background-color: #d4edda;
+                  color: #155724;
+                  padding: 15px;
+                  border: 1px solid #c3e6cb;
+                  border-radius: 5px;
+                  text-align: center;
+                "
+              >
+                Feedback sent successfully!
+              </p>
+              <p
+                id="error-message"
+                style="
+                  display: none;
+                  background-color: #f8d7da;
+                  color: #721c24;
+                  padding: 15px;
+                  border: 1px solid #f5c6cb;
+                  border-radius: 5px;
+                  text-align: center;
+                "
+              >
+                Failed to send feedback. Please try again.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
