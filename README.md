@@ -43,3 +43,4 @@ https://github.com/user-attachments/assets/22397f1a-11f2-445c-9a84-c8e17b9f5ea0
 1. Open index.html in your browser.
 
 ## Live Demo
+[View my Responsive Portfolio](https://aniruddha-25.github.io/Responsive_Portfolio/)
