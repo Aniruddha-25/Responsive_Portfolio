@@ -111,6 +111,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 40px auto;
+  padding: 40px 20px;
 }
 
 /* Home Section */
@@ -228,8 +230,8 @@ body {
 
 
 #about {
-  padding: 24px;
-  margin: 30px auto;
+  padding: 40px 30px;
+  margin: 40px auto;
   max-width: 1000px;
   width: 100%;
   text-align: initial;
@@ -259,8 +261,8 @@ body {
 
 
 #skills {
-  padding: 30px 0 0 0;
-  margin: 10px auto 0 auto;
+  padding: 40px 20px;
+  margin: 40px auto;
   max-width: 1200px;
   text-align: center;
   width: 100%;
@@ -271,6 +273,275 @@ body {
   margin-top: 0;
   margin-bottom: 18px;
   color: #ff5722;
+}
+
+#certifications {
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  width: 100%;
+  text-align: initial;
+  background-color: #2a2a3b;
+  border: 5px solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#certifications h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #ff5722;
+  text-align: center;
+}
+
+#education {
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  width: 100%;
+  text-align: initial;
+  background-color: #2a2a3b;
+  border: 5px solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#education h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #ff5722;
+  text-align: center;
+}
+
+#education .education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.education-card {
+  display: flex;
+  gap: 32px;
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(255, 87, 34, 0.35);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.education-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-logo {
+  flex: 0 0 200px;
+  min-width: 180px;
+  max-width: 200px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.education-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.education-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.education-header > div:first-child {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-degree {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #ff784e;
+}
+
+.education-institution {
+  margin: 4px 0 6px 0;
+  font-size: 1.05em;
+  color: #ffb199;
+  letter-spacing: 0.4px;
+}
+
+.education-university {
+  margin: 4px 0 6px 0;
+  font-size: 0.95em;
+  color: #ffb199;
+  letter-spacing: 0.4px;
+}
+
+.education-duration {
+  color: #ff784e;
+  font-weight: 700;
+  white-space: nowrap;
+  background: rgba(255, 87, 34, 0.12);
+  padding: 6px 14px;
+  border-radius: 999px;
+  align-self: flex-start;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+#certifications .certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.certification-card {
+  display: flex;
+  gap: 32px;
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(255, 87, 34, 0.35);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.certification-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certification-logo {
+  flex: 0 0 200px;
+  min-width: 180px;
+  max-width: 200px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.certification-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.certification-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.certification-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.certification-company {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #ff784e;
+}
+
+.certification-pill {
+  display: inline-flex;
+  padding: 6px 16px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: rgba(255, 87, 34, 0.15);
+  color: #ffb199;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.certification-duration {
+  color: #ff784e;
+  font-weight: 700;
+  white-space: nowrap;
+  background: rgba(255, 87, 34, 0.12);
+  padding: 6px 14px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.certification-issuer-line {
+  margin: 4px 0 6px 0;
+  font-size: 0.95em;
+  color: #ffb199;
+  letter-spacing: 0.4px;
+}
+
+.certification-actions {
+  margin-top: 8px;
+}
+
+.certification-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff5722;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.95em;
+}
+
+.certification-link:hover {
+  background: #e64a19;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
 }
 
 .skills-list {
@@ -462,7 +733,7 @@ body {
 
 
 #portfolio {
-  padding: 30px;
+  padding: 40px 30px;
   margin: 40px auto;
   max-width: 1200px;
   width: 100%;
@@ -516,7 +787,7 @@ body {
 
 
 #experience {
-  padding: 30px;
+  padding: 40px 30px;
   margin: 40px auto;
   max-width: 1200px;
   width: 100%;
@@ -730,7 +1001,7 @@ body {
 }
 
 #feedback {
-  padding: 30px;
+  padding: 40px 30px;
   margin: 40px auto;
   max-width: 1000px;
   width: 100%;
@@ -742,7 +1013,7 @@ body {
 }
 
 #contact {
-  padding: 30px;
+  padding: 40px 30px;
   margin: 40px auto;
   max-width: 1000px;
   width: 100%;
@@ -897,12 +1168,6 @@ body {
 }
 
 
-#skills.section {
-  margin-top: 15px;
-  margin-bottom: 0;
-  padding-bottom: 0;
- 
-}
 
 
 .project-cards-container {
@@ -997,10 +1262,6 @@ body {
   opacity: 1;
 }
 
-#portfolio.section, #portfolio {
-  padding-top: 0;
-  margin-top: 0;
-}
 
 .contact-card {
   background: #232334;
@@ -1198,7 +1459,20 @@ body {
     gap: 20px;
   }
 
+
   .experience-logo {
+    flex: 0 0 180px;
+    min-width: 160px;
+    max-width: 180px;
+  }
+
+  .certification-logo {
+    flex: 0 0 180px;
+    min-width: 160px;
+    max-width: 180px;
+  }
+
+  .education-logo {
     flex: 0 0 180px;
     min-width: 160px;
     max-width: 180px;
@@ -1219,6 +1493,26 @@ body {
 
   .skill {
     max-width: 100%;
+  }
+
+  .certification-card {
+    gap: 24px;
+  }
+
+  .certification-logo {
+    flex: 0 0 160px;
+    min-width: 140px;
+    max-width: 160px;
+  }
+
+  .education-card {
+    gap: 24px;
+  }
+
+  .education-logo {
+    flex: 0 0 160px;
+    min-width: 140px;
+    max-width: 160px;
   }
 
   .experience-card {
@@ -1317,7 +1611,9 @@ body {
   #portfolio,
   #experience,
   #feedback,
-  #contact {
+  #contact,
+  #certifications,
+  #education {
     margin: 20px auto;
     width: 100%;
     padding: 24px;
@@ -1340,7 +1636,17 @@ body {
     justify-content: center;
   }
 
+  .certifications-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .skill {
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  .certification {
     max-width: 100%;
     min-width: auto;
   }
@@ -1376,6 +1682,52 @@ body {
     min-width: 150px;
     max-width: 200px;
     width: auto;
+  }
+
+  .certification-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .certification-logo {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .certification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .certification-duration {
+    white-space: normal;
+    align-self: flex-start;
+  }
+
+  .education-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .education-logo {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .education-duration {
+    white-space: normal;
+    align-self: flex-start;
   }
 
   .contact-glass-card {
@@ -1419,6 +1771,54 @@ body {
     align-self: flex-start;
   }
 
+  .certification-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .certification-logo {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+  }
+
+  .certification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .certification-duration {
+    white-space: normal;
+    align-self: flex-start;
+  }
+
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .education-logo {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .education-duration {
+    white-space: normal;
+    align-self: flex-start;
+  }
+
   .project-cards-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -1438,7 +1838,9 @@ body {
   #portfolio,
   #experience,
   #feedback,
-  #contact {
+  #contact,
+  #certifications,
+  #education {
     padding: 20px;
     margin: 20px auto;
   }
@@ -1453,6 +1855,17 @@ body {
     width: 100%;
     min-width: auto;
     padding: 28px 20px;
+  }
+
+  .certification-card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .certification-logo {
+    max-width: 200px;
+    width: 100%;
   }
 
   .project-cards-container {
@@ -1484,6 +1897,30 @@ body {
     min-width: 130px;
     max-width: 160px;
     width: auto;
+  }
+
+  .certification-card {
+    padding: 18px;
+  }
+
+  .certification-logo {
+    max-width: 200px;
+  }
+
+  .certification-company {
+    font-size: 1.2em;
+  }
+
+  .education-card {
+    padding: 18px;
+  }
+
+  .education-logo {
+    max-width: 200px;
+  }
+
+  .education-degree {
+    font-size: 1.2em;
   }
 
   .contact-glass-card {
@@ -1555,7 +1992,9 @@ body {
   #portfolio,
   #experience,
   #feedback,
-  #contact {
+  #contact,
+  #certifications,
+  #education {
     padding: 16px;
     margin: 16px auto;
   }
@@ -1564,7 +2003,9 @@ body {
   #portfolio h2,
   #experience h2,
   #feedback h2,
-  #skills h2 {
+  #skills h2,
+  #certifications h2,
+  #education h2 {
     font-size: 28px;
   }
 
@@ -1686,7 +2127,9 @@ body {
   #portfolio,
   #experience,
   #feedback,
-  #contact {
+  #contact,
+  #certifications,
+  #education {
     padding: 12px;
     margin: 12px auto;
   }
@@ -1695,7 +2138,9 @@ body {
   #portfolio h2,
   #experience h2,
   #feedback h2,
-  #skills h2 {
+  #skills h2,
+  #certifications h2,
+  #education h2 {
     font-size: 24px;
     margin-bottom: 16px;
   }
@@ -1782,6 +2227,55 @@ body {
     font-size: 1.1em;
   }
 
+  .certification-card {
+    padding: 14px;
+  }
+
+  .certification-logo {
+    max-width: 180px;
+    padding: 12px;
+  }
+
+  .certification-company {
+    font-size: 1.1em;
+  }
+
+  .certification-pill {
+    font-size: 0.75em;
+    padding: 4px 12px;
+  }
+
+  .certification-duration {
+    font-size: 0.9em;
+    padding: 4px 10px;
+  }
+
+  .education-card {
+    padding: 14px;
+  }
+
+  .education-logo {
+    max-width: 180px;
+    padding: 12px;
+  }
+
+  .education-degree {
+    font-size: 1.1em;
+  }
+
+  .education-institution {
+    font-size: 0.95em;
+  }
+
+  .education-university {
+    font-size: 0.85em;
+  }
+
+  .education-duration {
+    font-size: 0.9em;
+    padding: 4px 10px;
+  }
+
   .experience-pill {
     font-size: 0.75em;
     padding: 4px 12px;
@@ -1845,13 +2339,6 @@ body {
    }
    100% {
      transform: rotate(360deg);
-   }
- }
- @media (min-width: 768px) {
-   #skills.section {
-     margin-top: 10vh;
-     margin-bottom: 0;
-     padding-bottom: 0;
    }
  }
  

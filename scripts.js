@@ -157,6 +157,52 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const certificationCards = document.querySelectorAll(".certification-card"); // Select all certification cards
+
+  
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add 'visible' class when in view
+        } else {
+          entry.target.classList.remove("visible"); // Remove 'visible' class when out of view
+        }
+      });
+    },
+    {
+      threshold: 0.2, 
+    }
+  );
+
+
+  certificationCards.forEach((card) => observer.observe(card));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const educationCards = document.querySelectorAll(".education-card"); // Select all education cards
+
+  
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add 'visible' class when in view
+        } else {
+          entry.target.classList.remove("visible"); // Remove 'visible' class when out of view
+        }
+      });
+    },
+    {
+      threshold: 0.2, 
+    }
+  );
+
+
+  educationCards.forEach((card) => observer.observe(card));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const scrollElements = document.querySelectorAll(".scroll-animation");
 
   const observer = new IntersectionObserver(
