@@ -386,6 +386,10 @@ body {
   flex-direction: column;
 }
 
+.education-actions {
+  margin-top: 10px;
+}
+
 .education-degree {
   margin: 0;
   font-size: 1.4em;
@@ -882,6 +886,19 @@ body {
   color: #ff784e;
 }
 
+.experience-actions {
+  margin-top: 12px;
+}
+
+.experience-link-btn,
+.education-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .experience-pill {
   display: inline-flex;
   padding: 6px 16px;
@@ -1174,7 +1191,8 @@ body {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  column-gap: 32px;
+  row-gap: 40px;
   justify-items: center;
   width: 100%;
   max-width: 1200px;
@@ -1187,7 +1205,7 @@ body {
   width: 100%;
   max-width: 280px;
   min-width: 240px;
-  height: 290px;
+  height: 360px;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
@@ -1362,6 +1380,11 @@ body {
 
 .contact-glass-method:hover {
   background: rgba(255, 87, 34, 0.5);
+}
+
+.contact-card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .contact-glass-icon {
@@ -1876,7 +1899,7 @@ body {
   .project-card {
     max-width: 100%;
     min-width: auto;
-    height: 300px;
+    height: 360px;
   }
 
   .experience-card {
@@ -2056,7 +2079,7 @@ body {
   }
 
   .project-card {
-    height: 280px;
+    height: 340px;
   }
 
   .project-overlay-content {
@@ -2189,7 +2212,7 @@ body {
   }
 
   .project-card {
-    height: 260px;
+    height: 320px;
   }
 
   .project-overlay-content h3 {
