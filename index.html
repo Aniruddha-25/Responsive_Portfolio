@@ -8,15 +8,10 @@
   </head>
   <body>
     <div class="container">
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      />
-
       <div class="container">
         <button class="hamburger" id="hamburger">&#9776;</button>
         <nav class="sidebar" id="sidebar">
-          <div class="logo"><i class="fas fa-desktop"></i> Portfolio</div>
+          <div class="logo"><i class="fa-solid fa-laptop"></i></i> Portfolio</div>
           <ul id="sidebar-menu">
             <li>
               <a href="#home"><i class="fas fa-home"></i> Home</a>
@@ -30,7 +25,7 @@
               >
             </li>
             <li>
-              <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+              <a href="#skills"><i class="fa-solid fa-computer"></i> Skills</a>
             </li>
             <li>
               <a href="#certifications"
@@ -40,14 +35,18 @@
             </li>
             <li>
               <a href="#education"
-                ><i class="fas fa-graduation-cap"></i> Education</a
+                ><i class="fa-solid fa-graduation-cap"></i>Education</a
               >
             </li>
             <li>
-              <a href="#portfolio"><i class="fas fa-file-alt"></i> Projects</a>
+              <a href="#portfolio"
+                ><i class="fa-solid fa-layer-group"></i> Projects</a
+              >
             </li>
             <li>
-              <a href="#contact"><i class="fa fa-address-book"></i> Contact</a>
+              <a href="#contact"
+                ><i class="fa-solid fa-address-card"></i> Contact</a
+              >
             </li>
             <li>
               <a href="#feedback"><i class="fas fa-comment"></i> Feedback</a>
@@ -62,32 +61,40 @@
           <section id="home">
             <div class="hero-grid">
               <div class="hero-text">
-                <p class="hero-pill">AI & ML Engineer</p>
+                <p class="hero-pill" style="font-size: 1.3em; font-weight: bold;">AI & ML Engineer</p>
                 <h1>Hi, I'm Aniruddha Salvankar</h1>
                 <p class="hero-lead">
-                  I design machine-learning workflows and responsive web
-                  products that turn messy data into intuitive dashboards,
-                  prototypes, and production-ready tools.
-                </p>
+                 I build intelligent, ML-powered Web Applications that turn Complexity into Clarity—Simple, Intuitive, and Crafted for an Exceptional User Experience. </p>
                 <div class="hero-actions">
                   <a
                     href="./Portfolio/Resume.pdf"
                     class="btn"
                     download="Aniruddha_Resume.pdf"
-                    >Download Resume</a
                   >
-                  <a href="#contact" class="btn ghost">Let's Connect</a>
+                    <i class="fa-solid fa-file"></i>
+                    <span>Download Resume</span>
+                  </a>
+                  <a href="#contact" class="btn ghost">
+                    <i class="fas fa-handshake"></i>
+                    <span>Let's Connect</span>
+                  </a>
                 </div>
                 <div class="hero-meta">
                   <div>
-                    <span class="hero-label">Location</span>
+                    <span class="hero-label" style="font-weight: bold;"
+                      ><i style="margin-bottom: 10px;" class="fas fa-location-dot"></i> Location</span
+                    >
                     <span class="hero-value">Bangalore, India</span>
                   </div>
                   <div>
-                    <span class="hero-label">Focus</span>
-                    <span class="hero-value"
-                      >AI/ML · Full-Stack · UI Systems</span
+                    <span style="margin-bottom: 10px; font-weight: bold;" class="hero-label"
+                      ><i class="fas fa-bullseye"></i> Focus</span
                     >
+                    <ul class="hero-value" style="list-style: none; padding-left: 0; margin: 0;">
+                      <li style="margin-bottom: 10px;">• AI/ML Engineering</li>
+                      <li style="margin-bottom: 10px;">• Full-Stack Development</li>
+                      <li>• UI/UX Design</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -903,5 +910,9 @@
       </div>
     </div>
     <script src="scripts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2309202332.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
