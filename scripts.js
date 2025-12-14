@@ -68,49 +68,51 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-document.getElementById("feedback-form").addEventListener("submit", async function (event) {
-  event.preventDefault(); // Prevent default form submission
+document
+  .getElementById("feedback-form")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent default form submission
 
-  const form = event.target;
-  const formData = new FormData(form);
+    const form = event.target;
+    const formData = new FormData(form);
 
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+      });
 
-    if (response.ok) {
+      if (response.ok) {
+        const successMessage = document.getElementById("success-message");
+        const errorMessage = document.getElementById("error-message");
+
+        successMessage.style.display = "block";
+        errorMessage.style.display = "none";
+
+        form.reset(); // Clear the form
+
+        // Hide the success message after 5 seconds
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 5000);
+      } else {
+        throw new Error("Failed to send feedback");
+      }
+    } catch (error) {
       const successMessage = document.getElementById("success-message");
       const errorMessage = document.getElementById("error-message");
 
-      successMessage.style.display = "block";
-      errorMessage.style.display = "none";
+      successMessage.style.display = "none";
+      errorMessage.style.display = "block";
 
-      form.reset(); // Clear the form
-
-      // Hide the success message after 5 seconds
+      // Hide the error message after 5 seconds
       setTimeout(() => {
-        successMessage.style.display = "none";
+        errorMessage.style.display = "none";
       }, 5000);
-    } else {
-      throw new Error("Failed to send feedback");
+
+      console.error("Error:", error);
     }
-  } catch (error) {
-    const successMessage = document.getElementById("success-message");
-    const errorMessage = document.getElementById("error-message");
-
-    successMessage.style.display = "none";
-    errorMessage.style.display = "block";
-
-    // Hide the error message after 5 seconds
-    setTimeout(() => {
-      errorMessage.style.display = "none";
-    }, 5000);
-
-    console.error("Error:", error);
-  }
-});
+  });
 
 document.addEventListener("DOMContentLoaded", () => {
   const photo = document.querySelector(".PersonalPhoto");
@@ -119,14 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          photo.classList.add("visible"); 
+          photo.classList.add("visible");
         } else {
-          photo.classList.remove("visible"); 
+          photo.classList.remove("visible");
         }
       });
     },
     {
-      threshold: 0.5, 
+      threshold: 0.5,
     }
   );
 
@@ -136,7 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const skills = document.querySelectorAll(".skill"); // Select all skill items
 
-  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -148,10 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2, 
+      threshold: 0.2,
     }
   );
-
 
   skills.forEach((skill) => observer.observe(skill));
 });
@@ -159,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const certificationCards = document.querySelectorAll(".certification-card"); // Select all certification cards
 
-  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -171,10 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2, 
+      threshold: 0.2,
     }
   );
-
 
   certificationCards.forEach((card) => observer.observe(card));
 });
@@ -182,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const educationCards = document.querySelectorAll(".education-card"); // Select all education cards
 
-  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -194,10 +191,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2, 
+      threshold: 0.2,
     }
   );
-
 
   educationCards.forEach((card) => observer.observe(card));
 });
@@ -216,10 +212,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2, 
+      threshold: 0.2,
     }
   );
-
 
   scrollElements.forEach((el) => observer.observe(el));
 });
