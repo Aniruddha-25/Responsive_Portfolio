@@ -10,8 +10,9 @@
 - A Responsive and Visually appealing Portfolio website built using HTML, CSS, and JavaScript.
 
   -> This project showcases Personal Information, Skills, Experience, and Projects in a Clean and Modern Layout.
-  ## Live Demo
-[View my Responsive Portfolio](https://aniruddha-25.github.io/Responsive_Portfolio/)
+  
+## Live Demo
+[Click to View](https://aniruddha-25.github.io/Responsive_Portfolio/)
 
 ## Features
 
