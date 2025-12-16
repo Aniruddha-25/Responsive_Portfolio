@@ -1,7 +1,7 @@
 # Responsive Portfolio
 
 
-https://github.com/user-attachments/assets/22397f1a-11f2-445c-9a84-c8e17b9f5ea0
+
 
 
 
@@ -10,6 +10,8 @@ https://github.com/user-attachments/assets/22397f1a-11f2-445c-9a84-c8e17b9f5ea0
 - A Responsive and Visually appealing Portfolio website built using HTML, CSS, and JavaScript.
 
   -> This project showcases Personal Information, Skills, Experience, and Projects in a Clean and Modern Layout.
+  ## Live Demo
+[View my Responsive Portfolio](https://aniruddha-25.github.io/Responsive_Portfolio/)
 
 ## Features
 
@@ -42,5 +44,3 @@ https://github.com/user-attachments/assets/22397f1a-11f2-445c-9a84-c8e17b9f5ea0
 1. Clone the repository
 1. Open index.html in your browser.
 
-## Live Demo
-[View my Responsive Portfolio](https://aniruddha-25.github.io/Responsive_Portfolio/)
