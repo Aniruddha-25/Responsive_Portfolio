@@ -46,4 +46,10 @@ const initSidebar = () => {
   });
 };
 
-window.addEventListener("DOMContentLoaded", initSidebar);
+window.addEventListener("DOMContentLoaded", () => {
+  if (typeof window.whenTemplatesReady === "function") {
+    window.whenTemplatesReady(initSidebar);
+  } else {
+    initSidebar();
+  }
+});

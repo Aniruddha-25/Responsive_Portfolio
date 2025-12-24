@@ -28,4 +28,10 @@ const initAnimations = () => {
   observeCollection(".PersonalPhoto", { threshold: 0.5 });
 };
 
-window.addEventListener("DOMContentLoaded", initAnimations);
+window.addEventListener("DOMContentLoaded", () => {
+  if (typeof window.whenTemplatesReady === "function") {
+    window.whenTemplatesReady(initAnimations);
+  } else {
+    initAnimations();
+  }
+});

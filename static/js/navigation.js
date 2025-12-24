@@ -63,4 +63,10 @@ const initNavigation = () => {
   updateActiveOnScroll();
 };
 
-window.addEventListener("DOMContentLoaded", initNavigation);
+window.addEventListener("DOMContentLoaded", () => {
+  if (typeof window.whenTemplatesReady === "function") {
+    window.whenTemplatesReady(initNavigation);
+  } else {
+    initNavigation();
+  }
+});

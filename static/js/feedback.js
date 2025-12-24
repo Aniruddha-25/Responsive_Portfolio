@@ -51,4 +51,10 @@ const initFeedbackForm = () => {
   });
 };
 
-window.addEventListener("DOMContentLoaded", initFeedbackForm);
+window.addEventListener("DOMContentLoaded", () => {
+  if (typeof window.whenTemplatesReady === "function") {
+    window.whenTemplatesReady(initFeedbackForm);
+  } else {
+    initFeedbackForm();
+  }
+});
