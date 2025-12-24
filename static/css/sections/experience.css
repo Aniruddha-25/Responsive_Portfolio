@@ -1,0 +1,224 @@
+/* === Experience Section === */
+#experience {
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  width: 100%;
+  text-align: initial;
+  background-color: #2a2a3b;
+  border: 5px solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#experience h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #ff5722;
+  text-align: center;
+}
+
+#experience h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #ff5722;
+}
+
+#experience .experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.experience-card {
+  display: flex;
+  gap: 32px;
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(255, 87, 34, 0.35);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+.experience-logo {
+  flex: 0 0 200px;
+  min-width: 180px;
+  max-width: 200px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.experience-logo.dual {
+  flex-direction: row;
+  gap: 14px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.experience-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.experience-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.experience-company {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #ff784e;
+}
+
+.experience-actions {
+  margin-top: 12px;
+}
+
+.experience-link-btn,
+.education-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.experience-pill {
+  display: inline-flex;
+  padding: 6px 16px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: rgba(255, 87, 34, 0.15);
+  color: #ffb199;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.experience-duration {
+  color: #ff784e;
+  font-weight: 700;
+  white-space: nowrap;
+  background: rgba(255, 87, 34, 0.12);
+  padding: 6px 14px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.experience-highlights {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-highlights li {
+  position: relative;
+  padding-left: 26px;
+  line-height: 1.6;
+}
+
+.experience-highlights li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #ff5722;
+  font-size: 1.3em;
+}
+
+.experience-tags {
+  font-weight: 600;
+  color: #fff;
+}
+
+.experience-project-line {
+  margin: 4px 0 6px 0;
+  font-size: 0.95em;
+  color: #ffb199;
+  letter-spacing: 0.4px;
+}
+
+.suprajit-logo,
+.Suprajit-company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: rotateLogo 6s linear infinite;
+}
+
+.suprajit-name-logo {
+  max-height: 34px;
+  height: auto;
+  width: auto;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.logo-bg-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  min-width: 120px;
+  min-height: 60px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#experience .experience-container {
+  width: 100%;
+}
+
+#experience p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.experience-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.experience-title .duration {
+  font-size: 18px;
+  color: #ff5722;
+  font-weight: bold;
+}

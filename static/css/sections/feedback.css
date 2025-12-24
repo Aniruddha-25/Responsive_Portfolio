@@ -1,0 +1,72 @@
+/* === Feedback Section === */
+#feedback {
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  width: 100%;
+  text-align: left;
+  background-color: #2a2a3b;
+  border: 5px solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#feedback h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #ff5722;
+  text-align: center;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 600px;
+}
+
+.feedback-form .form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.feedback-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ff5722;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ff5722;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #1a1a1a;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.feedback-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+  background-color: #e64a19;
+}

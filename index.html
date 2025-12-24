@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./static/css/base.css" />
+    <link rel="stylesheet" href="./static/css/sections/home.css" />
+    <link rel="stylesheet" href="./static/css/sections/about.css" />
+    <link rel="stylesheet" href="./static/css/sections/skills.css" />
+    <link rel="stylesheet" href="./static/css/sections/certifications.css" />
+    <link rel="stylesheet" href="./static/css/sections/education.css" />
+    <link rel="stylesheet" href="./static/css/sections/experience.css" />
+    <link rel="stylesheet" href="./static/css/sections/projects.css" />
+    <link rel="stylesheet" href="./static/css/sections/contact.css" />
+    <link rel="stylesheet" href="./static/css/sections/feedback.css" />
+    <link rel="stylesheet" href="./static/css/responsive.css" />
   </head>
   <body>
     <div class="container">
@@ -864,46 +874,9 @@
               </button>
             </form>
 
-            <div
-              id="form-messages"
-              style="
-                position: fixed;
-                top: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1000;
-                width: 80%;
-                max-width: 600px;
-              "
-            >
-              <p
-                id="success-message"
-                style="
-                  display: none;
-                  background-color: #d4edda;
-                  color: #155724;
-                  padding: 15px;
-                  border: 1px solid #c3e6cb;
-                  border-radius: 5px;
-                  text-align: center;
-                "
-              >
-                Feedback sent successfully!
-              </p>
-              <p
-                id="error-message"
-                style="
-                  display: none;
-                  background-color: #f8d7da;
-                  color: #721c24;
-                  padding: 15px;
-                  border: 1px solid #f5c6cb;
-                  border-radius: 5px;
-                  text-align: center;
-                "
-              >
-                Failed to send feedback. Please try again.
-              </p>
+            <div id="form-messages">
+              <p id="success-message">Feedback sent successfully!</p>
+              <p id="error-message">Failed to send feedback. Please try again.</p>
             </div>
           </section>
         </div>
@@ -918,7 +891,10 @@
         });
       })();
     </script>
-    <script src="scripts.js"></script>
+    <script src="./static/js/navigation.js" defer></script>
+    <script src="./static/js/sidebar.js" defer></script>
+    <script src="./static/js/animations.js" defer></script>
+    <script src="./static/js/feedback.js" defer></script>
     <script
       src="https://kit.fontawesome.com/2309202332.js"
       crossorigin="anonymous"

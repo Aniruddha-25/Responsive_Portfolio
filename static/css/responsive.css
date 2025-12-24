@@ -1,0 +1,727 @@
+/* === Skills Grid Tweaks === */
+@media screen and (max-width: 768px) {
+  #skills .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #skills .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skill {
+    padding: 15px;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-name {
+    font-size: 16px;
+  }
+}
+
+/* === Large Screen Adjustments === */
+@media (max-width: 1200px) {
+  .main-content {
+    margin-left: var(--sidebar-width);
+    padding: 30px;
+    width: calc(100% - var(--sidebar-width));
+  }
+
+  .project-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .experience-logo,
+  .certification-logo,
+  .education-logo {
+    flex: 0 0 180px;
+    min-width: 160px;
+    max-width: 180px;
+  }
+}
+
+/* === Tablet Landscape (768px - 1024px) === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-cards-container,
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .skill {
+    max-width: 100%;
+  }
+
+  .certification-card,
+  .education-card,
+  .experience-card {
+    gap: 24px;
+  }
+
+  .certification-logo,
+  .education-logo,
+  .experience-logo {
+    flex: 0 0 160px;
+    min-width: 140px;
+    max-width: 160px;
+  }
+
+  .experience-logo.dual {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .suprajit-name-logo {
+    min-width: 140px;
+    max-width: 180px;
+    width: auto;
+  }
+}
+
+/* === Tablet & Small Desktop (<= 1024px) === */
+@media (max-width: 1024px) {
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: min(80vw, 320px);
+    left: 0;
+    height: 100vh;
+    padding-top: 80px;
+    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  #sidebar-menu {
+    display: block;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 100px 20px 60px;
+    width: 100%;
+  }
+
+  .section {
+    min-height: auto;
+    padding: 60px 16px;
+    text-align: center;
+    align-items: center;
+  }
+
+  #home {
+    height: auto;
+    min-height: auto;
+  }
+
+  .home-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home-text {
+    max-width: 640px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .home-text h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+
+  .home-text p {
+    font-size: 1.05rem;
+  }
+
+  .PersonalPhoto {
+    max-width: 320px;
+    width: min(70vw, 320px);
+    margin-bottom: 10px;
+  }
+
+  #about,
+  #portfolio,
+  #experience,
+  #feedback,
+  #contact,
+  #certifications,
+  #education {
+    margin: 20px auto;
+    width: 100%;
+    padding: 24px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-card {
+    order: -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .certifications-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill,
+  .certification,
+  .project-card {
+    max-width: 100%;
+    min-width: auto;
+  }
+
+  .project-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .experience-card,
+  .certification-card,
+  .education-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .experience-logo,
+  .certification-logo,
+  .education-logo {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .experience-logo.dual {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .suprajit-name-logo {
+    min-width: 150px;
+    max-width: 200px;
+    width: auto;
+  }
+
+  .certification-header,
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .certification-duration,
+  .education-duration {
+    white-space: normal;
+    align-self: flex-start;
+  }
+
+  .contact-glass-card {
+    padding: 32px 24px 20px 24px;
+  }
+}
+
+/* === Medium Screens (<= 900px) === */
+@media (max-width: 900px) {
+  .experience-card,
+  .certification-card,
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .experience-logo,
+  .certification-logo,
+  .education-logo {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+  }
+
+  .experience-logo.dual {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .suprajit-name-logo {
+    min-width: 140px;
+    max-width: 180px;
+  }
+
+  .experience-header,
+  .certification-header,
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .experience-duration,
+  .certification-duration,
+  .education-duration {
+    white-space: normal;
+    align-self: flex-start;
+  }
+
+  .project-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* === Tablets & Large Phones (<= 768px) === */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 80px 16px 40px;
+  }
+
+  .section {
+    padding: 40px 12px;
+  }
+
+  #about,
+  #portfolio,
+  #experience,
+  #feedback,
+  #contact,
+  #certifications,
+  #education {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .skills-list,
+  .project-cards-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill {
+    width: 100%;
+    padding: 28px 20px;
+  }
+
+  .certification-card,
+  .experience-card,
+  .education-card {
+    padding: 18px;
+  }
+
+  .experience-logo,
+  .certification-logo,
+  .education-logo {
+    max-width: 200px;
+  }
+
+  .experience-logo.dual {
+    padding: 16px;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .suprajit-name-logo {
+    min-width: 130px;
+    max-width: 160px;
+  }
+
+  .certification-company,
+  .education-degree {
+    font-size: 1.2em;
+  }
+
+  .contact-glass-card {
+    padding: 24px 16px 16px 16px;
+    width: 100%;
+  }
+
+  .contact-glass-method {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 12px;
+  }
+
+  .contact-glass-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+  }
+
+  .contact-glass-icon img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .contact-label,
+  .contact-value {
+    font-size: 0.95em;
+  }
+
+  #feedback .feedback-form,
+  .form-container {
+    max-width: 100%;
+  }
+
+  .feedback-form {
+    padding: 0;
+  }
+
+  #sidebar-menu li a:hover {
+    background: none;
+  }
+
+  .hero-text {
+    padding: 24px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* === Small Phones (<= 600px) === */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 70px 12px 30px;
+  }
+
+  .section {
+    padding: 30px 8px;
+  }
+
+  #about,
+  #portfolio,
+  #experience,
+  #feedback,
+  #contact,
+  #certifications,
+  #education {
+    padding: 16px;
+    margin: 16px auto;
+  }
+
+  #about h2,
+  #portfolio h2,
+  #experience h2,
+  #feedback h2,
+  #skills h2,
+  #certifications h2,
+  #education h2 {
+    font-size: 28px;
+  }
+
+  .contact-glass-card {
+    padding: 20px 12px 12px 12px;
+    max-width: 100%;
+  }
+
+  .contact-glass-method {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .contact-glass-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    margin-right: 0;
+  }
+
+  .contact-glass-icon img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .contact-label,
+  .contact-value {
+    font-size: 0.9em;
+  }
+
+  .contact-glass-btn {
+    padding: 10px 24px;
+    font-size: 0.95em;
+    width: 100%;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea,
+  .feedback-form button {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+  }
+
+  .project-card {
+    height: 340px;
+  }
+
+  .project-overlay-content {
+    padding: 24px 12px 16px 12px;
+  }
+
+  .project-overlay-content h3 {
+    font-size: 1.2em;
+  }
+
+  .project-overlay-content p {
+    font-size: 0.9em;
+  }
+
+  .experience-company {
+    font-size: 1.2em;
+  }
+
+  .experience-highlights li {
+    font-size: 0.95em;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .hero-lead {
+    font-size: 0.95rem;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* === Extra Small Phones (<= 480px) === */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 60px 8px 20px;
+  }
+
+  .hamburger {
+    top: 12px;
+    left: 12px;
+    padding: 8px 12px;
+    font-size: 24px;
+  }
+
+  .sidebar {
+    width: 85vw;
+    padding: 60px 16px 20px;
+  }
+
+  .sidebar ul li {
+    margin: 18px 0;
+  }
+
+  .sidebar ul li a {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .section {
+    padding: 24px 6px;
+  }
+
+  #about,
+  #portfolio,
+  #experience,
+  #feedback,
+  #contact,
+  #certifications,
+  #education {
+    padding: 12px;
+    margin: 12px auto;
+  }
+
+  #about h2,
+  #portfolio h2,
+  #experience h2,
+  #feedback h2,
+  #skills h2,
+  #certifications h2,
+  #education h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.6rem, 10vw, 2.2rem);
+    margin-bottom: 16px;
+  }
+
+  .hero-lead {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions .btn {
+    padding: 10px 24px;
+    font-size: 0.9em;
+  }
+
+  .hero-photo-frame {
+    width: clamp(200px, 70vw, 280px);
+    min-height: 300px;
+    aspect-ratio: 4 / 5.2;
+  }
+
+  .about-simple p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .skill {
+    padding: 20px 16px;
+  }
+
+  .skill-name {
+    font-size: 1.1em;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .project-card {
+    height: 320px;
+  }
+
+  .project-overlay-content h3 {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .project-overlay-content p {
+    font-size: 0.85em;
+    line-height: 1.4;
+  }
+
+  .experience-card,
+  .certification-card,
+  .education-card {
+    padding: 14px;
+  }
+
+  .experience-logo,
+  .certification-logo,
+  .education-logo {
+    max-width: 180px;
+    padding: 12px;
+  }
+
+  .experience-logo.dual {
+    padding: 14px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .suprajit-name-logo {
+    min-width: 120px;
+    max-width: 140px;
+  }
+
+  .experience-company,
+  .certification-company,
+  .education-degree {
+    font-size: 1.1em;
+  }
+
+  .certification-pill,
+  .experience-pill {
+    font-size: 0.75em;
+    padding: 4px 12px;
+  }
+
+  .certification-duration,
+  .experience-duration,
+  .education-duration {
+    font-size: 0.9em;
+    padding: 4px 10px;
+  }
+
+  .experience-highlights li {
+    font-size: 0.9em;
+    padding-left: 20px;
+  }
+
+  .contact-glass-card {
+    padding: 16px 10px 10px 10px;
+  }
+
+  .contact-glass-method {
+    padding: 10px;
+  }
+
+  .contact-glass-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+
+  .contact-glass-icon img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .contact-label,
+  .contact-value {
+    font-size: 0.85em;
+  }
+
+  .feedback-form label {
+    font-size: 0.95em;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+}
