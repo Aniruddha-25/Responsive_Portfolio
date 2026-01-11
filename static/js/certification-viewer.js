@@ -19,8 +19,7 @@ function initializeCertificationViewer() {
   const certViewer = document.getElementById('certificationViewer');
   const closeBtn = document.getElementById('closeCertViewer');
   const viewerOverlay = document.querySelector('.certification-viewer-overlay');
-  const certFrame = document.getElementById('certViewerFrame');
-  const loader = document.getElementById("certViewerLoader");
+  const certFrame = document.getElementById("certViewerFrame");
 
   // Function to open certificate viewer
   window.openCertificateViewer = function (pdfUrl, fileName) {
@@ -28,31 +27,17 @@ function initializeCertificationViewer() {
     certViewer.classList.add("active");
     document.body.style.overflow = "hidden";
 
-    // Show loader and hide iframe
-    loader.classList.remove("hidden");
-    certFrame.classList.remove("loaded");
-
     // Set PDF source
     certFrame.src = pdfUrl;
   };
-
-  // Hide loader when iframe loads
-  if (certFrame) {
-    certFrame.addEventListener("load", function () {
-      loader.classList.add("hidden");
-      certFrame.classList.add("loaded");
-    });
-  }
 
   // Close viewer function
   function closeViewer() {
     certViewer.classList.remove("active");
     document.body.style.overflow = "";
-    // Clear iframe and reset state after animation
+    // Clear iframe after animation
     setTimeout(() => {
       certFrame.src = "";
-      certFrame.classList.remove("loaded");
-      loader.classList.remove("hidden");
     }, 300);
   }
 
