@@ -1,0 +1,30 @@
+/* About Section */
+#about {
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  width: 100%;
+  text-align: initial;
+  background-color: var(--bg-dark);
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-subtle);
+}
+
+#about h2 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.about-simple {
+  padding: 0 12px 10px;
+}
+
+.about-simple p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}

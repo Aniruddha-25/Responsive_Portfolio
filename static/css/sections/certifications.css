@@ -1,0 +1,317 @@
+/* Certifications Section */
+#certifications {
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+  width: 100%;
+  text-align: initial;
+  background-color: var(--bg-dark);
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-subtle);
+}
+
+#certifications h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+#certifications .certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.certification-card {
+  display: flex;
+  gap: 32px;
+  background: var(--bg-dark-glass-alt);
+  border: 1px solid var(--primary-overlay-medium);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 6px 24px var(--shadow-light);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.certification-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certification-logo {
+  flex: 0 0 200px;
+  min-width: 180px;
+  max-width: 200px;
+  background: var(--text-white);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 8px 20px var(--shadow-minimal);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.certification-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px var(--shadow-light);
+}
+
+.certification-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.certification-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.certification-company {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  color: var(--primary-light);
+}
+
+.certification-pill {
+  display: inline-flex;
+  padding: 6px 16px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: var(--primary-overlay-pill);
+  color: var(--primary-lighter);
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.certification-duration {
+  color: var(--primary-light);
+  font-weight: 700;
+  white-space: nowrap;
+  background: var(--primary-overlay-badge);
+  padding: 6px 14px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.certification-issuer-line {
+  margin: 4px 0 6px 0;
+  font-size: 0.95em;
+  color: var(--primary-lighter);
+  letter-spacing: 0.4px;
+}
+
+.certification-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.certification-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-color);
+  color: var(--text-white);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.95em;
+}
+
+.certification-link:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--primary-overlay-shadow);
+}
+
+/* Certification Viewer Styles */
+.certification-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.certification-viewer.active {
+  display: flex;
+}
+
+.certification-viewer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-very-dark);
+  backdrop-filter: blur(5px);
+}
+
+.certification-viewer-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-modal-overlay), var(--bg-modal-alt));
+  border: 2px solid var(--primary-overlay-medium-border);
+  border-radius: 20px;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+  height: 85vh;
+  max-height: 800px;
+  box-shadow: 0 15px 50px var(--overlay-strong);
+  animation: slideUp 0.4s ease-out;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.certification-viewer-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--primary-overlay-border);
+  border: 1px solid var(--primary-overlay-shadow);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-white);
+  font-size: 20px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.certification-viewer-close:hover {
+  background: var(--primary-overlay-shadow);
+  transform: rotate(90deg);
+}
+
+.certification-viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 25px 30px;
+  background: var(--primary-overlay-very-light);
+  border-bottom: 2px solid var(--primary-overlay-medium-alt);
+}
+
+.certification-viewer-header i {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.certification-viewer-title {
+  color: var(--text-white);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.certification-viewer-content {
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--shadow-medium);
+}
+
+.certification-viewer-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  background: var(--text-white);
+}
+
+/* Certification Viewer Responsive */
+@media (max-width: 768px) {
+  .certification-viewer-card {
+    width: 95%;
+    height: 90vh;
+    max-height: none;
+  }
+
+  .certification-viewer-header {
+    padding: 20px;
+  }
+
+  .certification-viewer-title {
+    font-size: 20px;
+  }
+
+  .certification-viewer-content {
+    padding: 15px;
+  }
+
+  .certification-viewer-actions {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .cert-viewer-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .certification-viewer-card {
+    width: 98%;
+    height: 95vh;
+  }
+
+  .certification-viewer-header {
+    padding: 15px;
+  }
+
+  .certification-viewer-header i {
+    font-size: 20px;
+  }
+
+  .certification-viewer-title {
+    font-size: 18px;
+  }
+
+  .certification-viewer-close {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .cert-viewer-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

@@ -105,7 +105,7 @@
     left: 0;
     height: 100vh;
     padding-top: 80px;
-    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.6);
+    box-shadow: 8px 0 24px var(--shadow-sidebar);
   }
 
   .sidebar.active {
@@ -379,9 +379,8 @@
     min-width: 60px;
   }
 
-  .contact-glass-icon img {
-    width: 50px !important;
-    height: 50px !important;
+  .contact-glass-icon i {
+    font-size: 20px;
   }
 
   .contact-label,

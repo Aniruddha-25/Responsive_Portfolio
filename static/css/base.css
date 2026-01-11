@@ -1,7 +1,5 @@
 /* === 1. Base Reset & Typography === */
-:root {
-  --sidebar-width: 270px;
-}
+
 
 * {
   box-sizing: border-box;
@@ -9,8 +7,8 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: var(--bg-darkest);
+  color: var(--text-white);
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -25,7 +23,7 @@ body {
 /* === 2. Sidebar Layout === */
 .sidebar {
   width: var(--sidebar-width);
-  background-color: #2a2a3b;
+  background-color: var(--bg-dark);
   padding: 20px;
   position: fixed;
   top: 0;
@@ -38,7 +36,7 @@ body {
 .sidebar-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: var(--overlay-medium);
   z-index: 90;
   opacity: 0;
   pointer-events: none;
@@ -52,7 +50,7 @@ body {
 
 .sidebar .logo {
   font-size: 24px;
-  color: #ff5722;
+  color: var(--primary-color);
   font-weight: bold;
   margin-bottom: 40px;
   display: flex;
@@ -70,7 +68,7 @@ body {
 }
 
 .sidebar ul li a {
-  color: #fff;
+  color: var(--text-white);
   text-decoration: none;
   font-size: 18px;
   display: flex;
@@ -83,8 +81,8 @@ body {
 
 .sidebar ul li a.active,
 .sidebar ul li a:hover {
-  background-color: #ff5722;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-white);
 }
 
 /* === 3. Content Shell === */
@@ -110,8 +108,8 @@ body {
 
 /* === 4. Buttons & Utilities === */
 .btn {
-  background: #ff5722;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--text-white);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -124,18 +122,18 @@ body {
 }
 
 .btn:hover {
-  background: #e64a19;
+  background: var(--primary-hover);
 }
 
 .btn.ghost {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--glass-white-strong);
 }
 
 .duration {
   float: right;
   font-size: 18px;
-  color: #ff5722;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
@@ -154,19 +152,19 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px;
-  background-color: #2a2a3b;
-  border: 5px solid #ff5722;
+  background-color: var(--bg-dark);
+  border: 5px solid var(--primary-color);
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px var(--shadow-medium);
   overflow: hidden;
 }
 
 .form-container {
-  background-color: #1a1a1a;
+  background-color: var(--bg-darkest);
   padding: 40px;
-  border: 2px solid #ff5722;
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--shadow-subtle);
   margin-bottom: 20px;
   width: 100%;
 }
@@ -174,9 +172,9 @@ body {
 /* === 5. Hamburger Toggle === */
 .hamburger {
   font-size: 30px;
-  background: #2a2a3b;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ff5722;
+  background: var(--bg-dark);
+  border: 1px solid var(--glass-white-medium);
+  color: var(--primary-color);
   cursor: pointer;
   padding: 10px 14px;
   position: fixed;
@@ -185,7 +183,7 @@ body {
   z-index: 110;
   display: none;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 18px var(--shadow-light);
 }
 
 /* === 6. Feedback Toasts === */
@@ -265,21 +263,21 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--overlay-dark);
   backdrop-filter: blur(5px);
   animation: fadeIn 0.3s ease-in-out;
 }
 
 .contact-model-card {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(135deg, var(--glass-white-subtle), var(--glass-white-faint));
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--glass-white-light);
   border-radius: 20px;
   padding: 40px;
   max-width: 500px;
   width: 90%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px var(--shadow-medium);
   animation: slideUp 0.4s ease-out;
   z-index: 10000;
 }
@@ -288,8 +286,8 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--glass-white-subtle);
+  border: 1px solid var(--glass-white-medium);
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -297,18 +295,18 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-white);
   font-size: 18px;
   transition: all 0.3s ease;
 }
 
 .contact-model-close:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--glass-white-medium);
   transform: rotate(90deg);
 }
 
 .contact-model-title {
-  color: #fff;
+  color: var(--text-white);
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -321,7 +319,7 @@ body {
 }
 
 .contact-model-subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-white-muted);
   font-size: 16px;
   text-align: center;
   margin-bottom: 30px;
@@ -338,8 +336,8 @@ body {
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-white-faint);
+  border: 1px solid var(--glass-white-subtle);
   border-radius: 15px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -347,10 +345,10 @@ body {
 }
 
 .contact-model-option:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--glass-white-subtle);
+  border-color: var(--glass-white-hover-border);
   transform: translateY(-3px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px var(--shadow-subtle);
 }
 
 .contact-model-icon {
@@ -370,28 +368,28 @@ body {
 }
 
 .contact-model-option.gmail .contact-model-icon {
-  background: linear-gradient(135deg, #EA4335, #C5221F);
-  color: #fff;
+  background: linear-gradient(135deg, var(--gmail-primary), var(--gmail-dark));
+  color: var(--text-white);
 }
 
 .contact-model-option.github .contact-model-icon {
-  background: linear-gradient(135deg, #333, #24292e);
-  color: #fff;
+  background: linear-gradient(135deg, var(--github-primary), var(--github-dark));
+  color: var(--text-white);
 }
 
 .contact-model-option.linkedin .contact-model-icon {
-  background: linear-gradient(135deg, #0077B5, #00A0DC);
-  color: #fff;
+  background: linear-gradient(135deg, var(--linkedin-primary), var(--linkedin-light));
+  color: var(--text-white);
 }
 
 .contact-model-option.whatsapp .contact-model-icon {
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: #fff;
+  background: linear-gradient(135deg, var(--whatsapp-primary), var(--whatsapp-dark));
+  color: var(--text-white);
 }
 
 .contact-model-option.instagram .contact-model-icon {
-  background: linear-gradient(135deg, #E1306C, #C13584, #833AB4, #5851DB);
-  color: #fff;
+  background: linear-gradient(135deg, var(--instagram-pink), var(--instagram-magenta), var(--instagram-purple), var(--instagram-blue));
+  color: var(--text-white);
 }
 
 .contact-model-info {
@@ -402,7 +400,7 @@ body {
 }
 
 .contact-model-label {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-white-label);
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -410,7 +408,7 @@ body {
 }
 
 .contact-model-value {
-  color: #fff;
+  color: var(--text-white);
   font-size: 16px;
   font-weight: 600;
 }

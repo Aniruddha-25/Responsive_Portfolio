@@ -1,0 +1,109 @@
+:root {
+  /* === Layout === */
+  --sidebar-width: 270px;
+  
+  /* === Primary Brand Colors === */
+  --primary-color: #ff5722;
+  --primary-hover: #e64a19;
+  --primary-light: #ff784e;
+  --primary-lighter: #ffb199;
+  --accent-gold: #ffb300;
+  --accent-gold-hover: #ff9f00;
+  
+  /* === Background Colors === */
+  --bg-darkest: #1a1a1a;
+  --bg-dark: #2a2a3b;
+  --bg-dark-alt: #232334;
+  --bg-dark-glass: rgba(35, 35, 52, 0.75);
+  --bg-dark-glass-alt: rgba(26, 26, 26, 0.8);
+  
+  /* === Text Colors === */
+  --text-white: #fff;
+  --text-light: #f5f5f5;
+  --text-gray: #ddd;
+  
+  /* === Overlay/Shadow Colors === */
+  --overlay-dark: rgba(0, 0, 0, 0.7);
+  --overlay-medium: rgba(0, 0, 0, 0.55);
+  --shadow-strong: rgba(0, 0, 0, 0.35);
+  --shadow-medium: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(0, 0, 0, 0.25);
+  --shadow-subtle: rgba(0, 0, 0, 0.2);
+  --shadow-soft: rgba(0, 0, 0, 0.18);
+  --shadow-minimal: rgba(0, 0, 0, 0.12);
+  --shadow-faint: rgba(0, 0, 0, 0.08);
+  --shadow-sidebar: rgba(0, 0, 0, 0.6);
+  
+  /* === Glassmorphism/White Overlays === */
+  --glass-white-strong: rgba(255, 255, 255, 0.4);
+  --glass-white-medium: rgba(255, 255, 255, 0.2);
+  --glass-white-light: rgba(255, 255, 255, 0.18);
+  --glass-white-subtle: rgba(255, 255, 255, 0.1);
+  --glass-white-faint: rgba(255, 255, 255, 0.05);
+  --glass-white-minimal: rgba(255, 255, 255, 0.04);
+  --glass-white-hover: rgba(255, 255, 255, 0.06);
+  --glass-white-hover-border: rgba(255, 255, 255, 0.3);
+  --text-white-muted: rgba(255, 255, 255, 0.7);
+  --text-white-label: rgba(255, 255, 255, 0.6);
+  
+  /* === Brand Color Overlays === */
+  --primary-overlay-strong: rgba(255, 87, 34, 0.85);
+  --primary-overlay-medium: rgba(255, 87, 34, 0.35);
+  --primary-overlay-light: rgba(255, 87, 34, 0.25);
+  --primary-overlay-border: rgba(255, 87, 34, 0.2);
+  --primary-overlay-glass: rgba(255, 87, 34, 0.18);
+  --primary-overlay-pill: rgba(255, 87, 34, 0.15);
+  --primary-overlay-badge: rgba(255, 87, 34, 0.12);
+  --primary-overlay-shadow: rgba(255, 87, 34, 0.4);
+  --primary-overlay-subtle: rgba(255, 87, 34, 0.04);
+  
+  /* === Success/Error Colors === */
+  --success-bg: #d4edda;
+  --success-text: #155724;
+  --success-border: #c3e6cb;
+  --error-bg: #f8d7da;
+  --error-text: #721c24;
+  --error-border: #f5c6cb;
+  
+  /* === Social Media Brand Colors === */
+  --social-teal: #4ecca3;
+  --gmail-primary: #EA4335;
+  --gmail-dark: #C5221F;
+  --github-primary: #333;
+  --github-dark: #24292e;
+  --linkedin-primary: #0077B5;
+  --linkedin-light: #00A0DC;
+  --whatsapp-primary: #25D366;
+  --whatsapp-dark: #128C7E;
+  --instagram-pink: #E1306C;
+  --instagram-magenta: #C13584;
+  --instagram-purple: #833AB4;
+  --instagram-blue: #5851DB;
+  
+  /* === Icon Colors (Contact Section) === */
+  --icon-phone-start: #4caf50;
+  --icon-phone-end: #388e3c;
+  --icon-email-start: #f44336;
+  --icon-email-end: #d32f2f;
+  --icon-linkedin-start: #0077b5;
+  --icon-linkedin-end: #005885;
+  
+  /* === Additional Shadow/Effect Colors === */
+  --shadow-extra-light: rgba(0, 0, 0, 0.1);
+  --shadow-very-light: rgba(0, 0, 0, 0.15);
+  --shadow-very-faint: rgba(0, 0, 0, 0.07);
+  --overlay-very-dark: rgba(0, 0, 0, 0.85);
+  --overlay-strong: rgba(0, 0, 0, 0.5);
+  --primary-overlay-medium-alt: rgba(255, 87, 34, 0.3);
+  --primary-overlay-extra-light: rgba(255, 87, 34, 0.13);
+  --primary-overlay-very-light: rgba(255, 87, 34, 0.1);
+  --primary-overlay-medium-border: rgba(255, 87, 34, 0.5);
+  --icon-phone-shadow: rgba(76, 175, 80, 0.3);
+  --icon-phone-shadow-hover: rgba(76, 175, 80, 0.5);
+  --icon-email-shadow: rgba(244, 67, 54, 0.3);
+  --icon-email-shadow-hover: rgba(244, 67, 54, 0.5);
+  --icon-linkedin-shadow: rgba(0, 119, 181, 0.3);
+  --icon-linkedin-shadow-hover: rgba(0, 119, 181, 0.5);
+  --bg-modal-overlay: rgba(42, 42, 59, 0.98);
+  --bg-modal-alt: rgba(35, 35, 52, 0.98);
+}
