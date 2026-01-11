@@ -195,7 +195,7 @@
 }
 
 .skill:hover {
-  transform: scale(1.1);
+  transform: center;
   border-color: #ff9f00;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
