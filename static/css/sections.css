@@ -2323,6 +2323,176 @@
   box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
 }
 
+/* === Certification Viewer Styles === */
+.certification-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.certification-viewer.active {
+  display: flex;
+}
+
+.certification-viewer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+.certification-viewer-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(42, 42, 59, 0.98), rgba(35, 35, 52, 0.98));
+  border: 2px solid rgba(255, 87, 34, 0.5);
+  border-radius: 20px;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+  height: 85vh;
+  max-height: 800px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s ease-out;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.certification-viewer-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 87, 34, 0.2);
+  border: 1px solid rgba(255, 87, 34, 0.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.certification-viewer-close:hover {
+  background: rgba(255, 87, 34, 0.4);
+  transform: rotate(90deg);
+}
+
+.certification-viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 25px 30px;
+  background: rgba(255, 87, 34, 0.1);
+  border-bottom: 2px solid rgba(255, 87, 34, 0.3);
+}
+
+.certification-viewer-header i {
+  font-size: 24px;
+  color: #ff5722;
+}
+
+.certification-viewer-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.certification-viewer-content {
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.certification-viewer-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Certification Viewer Responsive */
+@media (max-width: 768px) {
+  .certification-viewer-card {
+    width: 95%;
+    height: 90vh;
+    max-height: none;
+  }
+
+  .certification-viewer-header {
+    padding: 20px;
+  }
+
+  .certification-viewer-title {
+    font-size: 20px;
+  }
+
+  .certification-viewer-content {
+    padding: 15px;
+  }
+
+  .certification-viewer-actions {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .cert-viewer-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .certification-viewer-card {
+    width: 98%;
+    height: 95vh;
+  }
+
+  .certification-viewer-header {
+    padding: 15px;
+  }
+
+  .certification-viewer-header i {
+    font-size: 20px;
+  }
+
+  .certification-viewer-title {
+    font-size: 18px;
+  }
+
+  .certification-viewer-close {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .cert-viewer-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
 /* --- sections/about.css --- */
 #about {
   padding: 40px 30px;
