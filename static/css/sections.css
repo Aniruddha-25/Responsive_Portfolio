@@ -2422,6 +2422,44 @@
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.certification-viewer-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+}
+
+.certification-viewer-loader.hidden {
+  display: none;
+}
+
+.loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 87, 34, 0.2);
+  border-top: 4px solid #ff5722;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-text {
+  color: #ff5722;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .certification-viewer-iframe {
@@ -2430,6 +2468,12 @@
   border: none;
   border-radius: 8px;
   background: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certification-viewer-iframe.loaded {
+  opacity: 1;
 }
 
 /* Certification Viewer Responsive */
