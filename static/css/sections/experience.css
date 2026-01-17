@@ -156,6 +156,35 @@
 .experience-tags {
   font-weight: 600;
   color: var(--text-white);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--tech-badge-bg);
+  border: 1px solid var(--tech-badge-border);
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--text-white);
+  transition: all 0.3s ease;
+}
+
+.tech-badge i {
+  font-size: 1.1em;
+  color: var(--text-white);
+}
+
+.tech-badge:hover {
+  background: var(--tech-badge-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--tech-badge-hover-shadow);
 }
 
 .experience-project-line {

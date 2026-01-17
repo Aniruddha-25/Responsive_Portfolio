@@ -98,6 +98,12 @@
   --primary-overlay-extra-light: rgba(255, 87, 34, 0.13);
   --primary-overlay-very-light: rgba(255, 87, 34, 0.1);
   --primary-overlay-medium-border: rgba(255, 87, 34, 0.5);
+  
+  /* === Tech Badge Colors === */
+  --tech-badge-bg: rgba(255, 255, 255, 0.1);
+  --tech-badge-border: rgba(255, 255, 255, 0.3);
+  --tech-badge-hover-bg: rgba(255, 255, 255, 0.2);
+  --tech-badge-hover-shadow: rgba(255, 255, 255, 0.2);
   --icon-phone-shadow: rgba(76, 175, 80, 0.3);
   --icon-phone-shadow-hover: rgba(76, 175, 80, 0.5);
   --icon-email-shadow: rgba(244, 67, 54, 0.3);
