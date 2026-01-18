@@ -206,6 +206,11 @@
     gap: 20px;
   }
 
+  .project-card {
+    max-width: 100%;
+    height: 450px;
+  }
+
   .experience-card,
   .certification-card,
   .education-card {
@@ -299,6 +304,24 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+
+  .project-card {
+    max-width: 100%;
+    height: 430px;
+  }
+
+  .project-overlay-content {
+    padding: 24px 12px 20px 12px;
+  }
+
+  .project-overlay-content h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+
+  .project-overlay-content p {
+    font-size: 0.9em;
+  }
 }
 
 /* === Tablets & Large Phones (<= 768px) === */
@@ -308,7 +331,13 @@
   }
 
   .section {
-    padding: 40px 12px;
+   
+
+  .project-card {
+    max-width: 350px;
+    margin: 0 auto;
+    height: 480px;
+  } padding: 40px 12px;
   }
 
   #about,
