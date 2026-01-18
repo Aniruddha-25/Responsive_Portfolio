@@ -95,6 +95,13 @@
   color: var(--primary-light);
 }
 
+.experience-project-line {
+  margin: 4px 0 6px 0;
+  font-size: 0.95em;
+  color: var(--primary-lighter) ;
+  letter-spacing: 0.4px;
+}
+
 .experience-actions {
   margin-top: 12px;
 }
@@ -142,7 +149,6 @@
 .experience-highlights li {
   position: relative;
   padding-left: 26px;
-  line-height: 1.6;
 }
 
 .experience-highlights li::before {
@@ -187,13 +193,6 @@
   box-shadow: 0 4px 12px var(--tech-badge-hover-shadow);
 }
 
-.experience-project-line {
-  margin: 4px 0 6px 0;
-  font-size: 0.95em;
-  color: var(--primary-lighter);
-  letter-spacing: 0.4px;
-}
-
 .suprajit-logo,
 .Suprajit-company-logo {
   width: 50px;
@@ -230,11 +229,11 @@
   width: 100%;
 }
 
-#experience p {
+#experience li {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.2;
   color: var(--text-gray);
-  margin-bottom: 20px;
+  
 }
 
 .experience-title {

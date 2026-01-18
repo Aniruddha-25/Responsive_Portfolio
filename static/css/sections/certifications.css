@@ -126,26 +126,6 @@
   flex-wrap: wrap;
 }
 
-.certification-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--primary-color);
-  color: var(--text-white);
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-size: 0.95em;
-}
-
-.certification-link:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px var(--primary-overlay-shadow);
-}
-
 /* Certification Viewer Styles */
 .certification-viewer {
   position: fixed;

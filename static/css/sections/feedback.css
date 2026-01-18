@@ -56,17 +56,3 @@
   resize: vertical;
 }
 
-.feedback-form button {
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: var(--text-white);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s;
-}
-
-.feedback-form button:hover {
-  background-color: var(--primary-hover);
-}

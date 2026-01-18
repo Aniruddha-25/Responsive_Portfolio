@@ -483,8 +483,7 @@
   }
 
   .feedback-form input,
-  .feedback-form textarea,
-  .feedback-form button {
+  .feedback-form textarea {
     font-size: 16px;
     padding: 12px;
     width: 100%;
@@ -595,10 +594,7 @@
     margin-bottom: 20px;
   }
 
-  .hero-actions .btn {
-    padding: 10px 24px;
-    font-size: 0.9em;
-  }
+ 
 
   .hero-photo-frame {
     width: clamp(200px, 70vw, 280px);

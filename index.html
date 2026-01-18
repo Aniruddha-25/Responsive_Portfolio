@@ -112,7 +112,7 @@
               <div class="hero-card">
                 <div class="hero-photo-frame">
                   <img
-                    src="./img/img.webp"
+                    src="./img/img.jpg"
                     alt="Aniruddha Salvankar"
                     class="hero-photo"
                   />
@@ -185,7 +185,7 @@
                   </ul>
                   <div class="experience-actions">
                     <a
-                      class="btn experience-link-btn"
+                      class="btn"
                       href="https://nicozn.com/"
                       target="_blank"
                       rel="noopener"
@@ -249,7 +249,7 @@
                   </ul>
                   <div class="experience-actions">
                     <a
-                      class="btn experience-link-btn"
+                      class="btn"
                       href="https://suprajit.com/"
                       target="_blank"
                       rel="noopener"
@@ -542,14 +542,12 @@
                     <span class="certification-duration">Oct 2025</span>
                   </div>
                   <div class="certification-actions">
-                    <a
-                      href="data\certifications-and-achievements\coursera\ibm-machine-learning-professional-certificate-coursera.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="certification-link"
+                    <button
+                      onclick="openCertificateViewer('data/certifications-and-achievements/coursera/ibm-machine-learning-professional-certificate-coursera.pdf', 'IBM Machine Learning Certificate')"
+                      class="btn"
                     >
                       <i class="fas fa-external-link-alt"></i> View Certificate
-                    </a>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -575,22 +573,18 @@
                     <span class="certification-duration">Nov 2025</span>
                   </div>
                   <div class="certification-actions">
-                    <a
-                      href="data\certifications-and-achievements\tcs-ion-nqt\it-nov-2025\tcs-ion-nqt-it-score-card.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="certification-link"
+                    <button
+                      onclick="openCertificateViewer('data/certifications-and-achievements/tcs-ion-nqt/it-nov-2025/tcs-ion-nqt-it-score-card.pdf', 'TCS NQT Score Card')"
+                      class="btn"
                     >
                       <i class="fas fa-external-link-alt"></i> View Score Card
-                    </a>
-                    <a
-                      href="data\certifications-and-achievements\tcs-ion-nqt\it-nov-2025\tcs-ion-nqt-it-psychometric.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="certification-link"
+                    </button>
+                    <button
+                      onclick="openCertificateViewer('data/certifications-and-achievements/tcs-ion-nqt/it-nov-2025/tcs-ion-nqt-it-psychometric.pdf', 'TCS NQT Psychometric')"
+                      class="btn"
                     >
                       <i class="fas fa-external-link-alt"></i> View Psychometric
-                    </a>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -627,7 +621,7 @@
                   </div>
                   <div class="education-actions">
                     <a
-                      class="btn education-link-btn"
+                      class="btn"
                       href="https://mite.ac.in/"
                       target="_blank"
                       rel="noopener"
@@ -665,7 +659,7 @@
                   </div>
                   <div class="education-actions">
                     <a
-                      class="btn education-link-btn"
+                      class="btn"
                       href="https://poornaprajnaadamaru.edu.in/"
                       target="_blank"
                       rel="noopener"
@@ -704,7 +698,7 @@
                   </div>
                   <div class="education-actions">
                     <a
-                      class="btn education-link-btn"
+                      class="btn"
                       href="https://stmarysssc.org/"
                       target="_blank"
                       rel="noopener"
@@ -913,7 +907,7 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn" id="submit-button">
+              <button type="submit" id="submitFeedback" class="btn">
                 Submit Feedback
               </button>
             </form>
