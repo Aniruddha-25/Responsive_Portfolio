@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Source Viewer – Portfolio</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #0d1117;
+        color: #c9d1d9;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.4rem;
+        color: #58a6ff;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+        color: #8b949e;
+        margin-bottom: 1.5rem;
+      }
+
+      .toolbar {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        width: 100%;
+        max-width: 1100px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .file-select {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .file-btn {
+        padding: 0.35rem 0.9rem;
+        border-radius: 6px;
+        border: 1px solid #30363d;
+        background: #161b22;
+        color: #c9d1d9;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: border-color 0.2s, background 0.2s;
+      }
+
+      .file-btn:hover { border-color: #58a6ff; color: #58a6ff; }
+      .file-btn.active { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+
+      .copy-btn {
+        margin-left: auto;
+        padding: 0.4rem 1.1rem;
+        border-radius: 6px;
+        border: none;
+        background: #238636;
+        color: #fff;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+
+      .copy-btn:hover { background: #2ea043; }
+      .copy-btn.copied { background: #1a7f37; }
+
+      .line-count {
+        font-size: 0.8rem;
+        color: #8b949e;
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      textarea {
+        width: 100%;
+        max-width: 1100px;
+        height: calc(100vh - 200px);
+        min-height: 400px;
+        background: #161b22;
+        color: #c9d1d9;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        resize: vertical;
+        outline: none;
+        tab-size: 2;
+      }
+
+      textarea:focus { border-color: #58a6ff; }
+
+      .status {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #8b949e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📄 HTML Source Viewer</h1>
+    <p class="subtitle">Browse the HTML source files of this portfolio project</p>
+
+    <div class="toolbar">
+      <div class="file-select" id="file-select">
+        <button class="file-btn active" data-file="index.html">index.html</button>
+        <button class="file-btn" data-file="contact-model.html">contact-model.html</button>
+        <button class="file-btn" data-file="certification-viewer.html">certification-viewer.html</button>
+      </div>
+      <span class="line-count" id="line-count"></span>
+      <button class="copy-btn" id="copy-btn">Copy</button>
+    </div>
+
+    <textarea id="source-box" readonly spellcheck="false" placeholder="Loading…"></textarea>
+    <p class="status" id="status"></p>
+
+    <script>
+      const sourceBox = document.getElementById('source-box');
+      const copyBtn = document.getElementById('copy-btn');
+      const lineCount = document.getElementById('line-count');
+      const status = document.getElementById('status');
+
+      async function loadFile(filename) {
+        sourceBox.value = 'Loading…';
+        lineCount.textContent = '';
+        status.textContent = '';
+        try {
+          const res = await fetch('./' + filename);
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          const text = await res.text();
+          sourceBox.value = text;
+          const lines = text.split('\n').length;
+          lineCount.textContent = lines + ' lines · ' + text.length.toLocaleString() + ' chars';
+          status.textContent = '✔ Loaded ' + filename;
+        } catch (e) {
+          sourceBox.value = '';
+          status.textContent = '✖ Could not load ' + filename + ': ' + e.message;
+        }
+      }
+
+      document.getElementById('file-select').addEventListener('click', function (e) {
+        const btn = e.target.closest('.file-btn');
+        if (!btn) return;
+        document.querySelectorAll('.file-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        loadFile(btn.dataset.file);
+      });
+
+      copyBtn.addEventListener('click', function () {
+        if (!sourceBox.value) return;
+        navigator.clipboard.writeText(sourceBox.value).then(() => {
+          copyBtn.textContent = '✔ Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(() => { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('copied'); }, 2000);
+        }).catch(() => {
+          sourceBox.select();
+          document.execCommand('copy');
+        });
+      });
+
+      // Load default file on page open
+      loadFile('index.html');
+    </script>
+  </body>
+</html>
